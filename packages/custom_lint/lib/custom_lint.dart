@@ -7,9 +7,7 @@ import 'package:analyzer_plugin/starter.dart';
 import 'log.dart';
 
 Future<void> start(List<String> args, SendPort sendPort) async {
-  final port = ReceivePort();
-  sendPort.send(port.sendPort);
-
+  log('start');
   ServerPluginStarter(Plugin()).start(sendPort);
 }
 
